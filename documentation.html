@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>DFText</title>
+  </head>
+  <body style="background-color: #383E42">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+        <a class="navbar-brand" href="#">DFText <b> 0.1</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="credits.html">Credits</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="changelog.html">Changelog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Documentation<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <span id="separator">&#8203;</span>
+    <center style="color: white; font-size: 25px;">Not sure how to make a documentation so here's some examples and codeblocks.</center>
+    <div class="list-group d-flex justify-content-center">
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h4 class="mb-1"><img src="event.png" width="30" height="30"> Events</h4>
+          </div>
+          <p class="mb-1">playerevent(ACTION HERE)</p>
+          <p class="mb-1">entityevent(ACTION HERE)</p>
+        </a>
+        <span id="separator">&#8203;</span>
+        <a class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h4 class="mb-1"><img src="action.png" width="30" height="30"> Actions</h4>
+          </div>
+          <p class="mb-1">playeraction(ACTION HERE)</p>
+          <p class="mb-1">entityaction(ACTION HERE)</p>
+          <p class="mb-1">gameaction(ACTION HERE)</p>
+        </a>
+        <span id="separator">&#8203;</span>
+        <a class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h4 class="mb-1"><img src="if.png" width="30" height="30"> Ifs</h4>
+          </div>
+          <p class="mb-1">ifbracket(open)</p>
+          <p class="mb-1">ifbracket(close)</p>
+          <p class="mb-1">repeatbracket(open)</p>
+          <p class="mb-1">repeatbracket(close)</p>
+          <p class="mb-1">repeat(ACTION HERE)</p>
+          <p class="mb-1">else(LEAVE THIS EMPTY)</p>
+          <p class="mb-1">ifvariable(ACTION HERE)</p>
+          <p class="mb-1">ifgame(ACTION HERE)</p>
+          <p class="mb-1">ifplayer (ACTION HERE)</p>
+          <p class="mb-1">ifentity (ACTION HERE)</p>
+        </a>
+        <span id="separator">&#8203;</span>
+        <a class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h4 class="mb-1"><img src="other.png" width="30" height="30"> Other</h4>
+            </div>
+            <p class="mb-1">setvariable(ACTION HERE)</p>
+            <p class="mb-1">control(ACTION HERE)</p>
+            <p class="mb-1">function(FUNCTION NAME)</p>
+            <p class="mb-1">callfunction(FUNCTION NAME)</p>
+            <p class="mb-1">selectobject(ACTION HERE)</p>
+            <p class="mb-1">process(PROCESS NAME)</p>
+            <p class="mb-1">callprocess(PROCESS NAME)</p>
+          </a>
+          <span id="separator">&#8203;</span>
+          <a class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between">
+                <h4 class="mb-1"><img src="example.png" width="30" height="30"> Examples</h4>
+              </div>
+              <p class="mb-1"><b>Simple event actions: </b>playerevent(Join);playeraction(Damage);playeraction(SendMessage);playeraction(Kick)</p>
+              <p class="mb-1"><b>If Example: </b>playerevent(Join);ifplayer(NameEquals);bracket(open);playeraction(SendMessage);bracket(close)</p>
+              <p class="mb-1"><b>Vote Event: </b>playerevent(Vote);playeraction(GiveItems);playeraction(SendMessage)</p>
+            </a>
+        </div>
