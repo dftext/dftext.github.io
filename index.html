@@ -10,7 +10,7 @@
   <body style="background-color: #383E42">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-        <a class="navbar-brand" href="#">DFText <b> 0.1</b></a>
+        <a class="navbar-brand" href="#">DFText <b> 0.2</b></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,12 +28,15 @@
             <li class="nav-item">
                 <a class="nav-link" href="documentation.html">Documentation</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="stats.html">Statistics</span></a>
+            </li>
           </ul>
         </div>
     </nav>
     <span id="separator">&#8203;</span>
     <center>
-        <textarea id="codebox" style="background-color: #26292C; color: white; border:10px solid #1C1F21" name="Code" rows="30" cols="250" placeholder="Input DFText code here." spellcheck="false">playerevent(Join);playeraction(Damage)</textarea>
+        <textarea id="codebox" style="background-color: #26292C; color: white; border:10px solid #1C1F21" name="Code" rows="30" cols="250" placeholder="Input DFText code here." spellcheck="false">playeraction(Damage[num:10,num:5])</textarea>
         <center style="color: white; text-shadow: 1px 2px #000000">
             Order of actions: <b>Convert to DF Code</b> > <b>Compress</b> > <b>Give Command</b>
         </center>
@@ -42,6 +45,7 @@
         <button type="button" class="btn btn-dark" onclick="decompress()">Decompress</button>
         <button type="button" class="btn btn-dark" onclick="givecommand()">Give Command</button>
         <button type="button" class="btn btn-dark" onclick="copy()">Copy</button>
+        <button type="button" class="btn btn-info" onclick="debug()">Debug</button>
     </center>
     <script type="text/javascript" src="pako.js"></script>
     <script src="script.js"></script>

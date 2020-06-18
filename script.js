@@ -25,19 +25,44 @@ var process = "{\"id\":\"block\",\"block\":\"process\",\"args\":{\"items\":[{\"i
 var giveCommand = "/give @p minecraft:ender_chest{PublicBukkitValues:{\"hypercube:codetemplatedata\":\'{\"author\":\"DFText\",\"name\":\"DFText Template\",\"version\":1,\"code\":\"\%CODEHERE%\"}\'},display:{Name:\'{\"text\":\"DFText Template\"}\'}}"
 /*
 
-
-{"block":"select_obj","id":"block","args":{"items":[]},"action":"Shooter"}
-
 INVERTED{"block":"select_obj","id":"block","args":{"items":[]},"inverted":"NOT","action":"FilterSelect","subAction":"Subaction"}
-
-{"block":"repeat","id":"block","args":{"items":[]},"action":"Multiple"}
-{"id":"bracket","type":"repeat","direct":"open"}
-{"id":"bracket","type":"repeat","direct":"close"}
 
 INVERTED {"block":"repeat","id":"block","args":{"items":[]},"inverted":"NOT","action":"While","subAction":"HasPlayer"}
 
-
 */
+
+function debug() {
+    x = document.getElementById('codebox').value; // Get the codebox text.
+    codeblock = x.split("(");
+    currentblock = codeblock[0];
+    /*
+    if(x.includes("playeraction")) { // playeraction(Damage[num:10]) playeraction(Damage[num:10,num:5])     
+        item = x.slice(12,999);
+    }
+    if(x.includes("entityaction")) {
+        item = x.slice(14,999)
+    }
+    */
+    length = currentblock.length + 1;
+    item = x.slice(length, 999);
+    item = item.replace("(", "");
+    item = item.replace(")", "");  
+    item = item.replace("]", "");
+    item = item.split("[");
+    x = item;
+    action = item[0];
+    item.shift();
+    x = "";
+    item = item.toString();
+    item = item.split(",");
+    item.forEach(getItems);
+    console.log("Codeblock: " + currentblock + "\nAction: " + action + "\nItem(s): " + item)
+    document.getElementById('codebox').value = x; // Set the codebox text to x
+}
+
+function getItems(item, index) {
+    x = x + "\n" + item + " Item: " + index;
+}
 
 function printConsole() {
     x = document.getElementById('codebox').value + " test"; 
